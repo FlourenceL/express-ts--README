@@ -111,6 +111,7 @@ Create a `tsconfig.json` file in your project root with modern TypeScript settin
 - `"type": "module"` in package.json enables ES modules
 - `"module": "ES2022"` uses modern JavaScript modules
 - `"strict": true` enables all strict type-checking options
+- `noUnusedLocals` and `noUnusedParameters` enforce clean code (can be disabled during early development if too restrictive)
 - Source files in `src/`, compiled output in `dist/`
 
 ## Creating the Express Server
