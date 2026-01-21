@@ -144,9 +144,8 @@ express-ts-app/
 Create `src/index.ts`:
 
 ```typescript
-import express, { Express, Request, Response } from 'express';
-import userRoutes from './routes/userRoutes.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import express from 'express';
+import type { Request, Response, Express } from 'express';
 
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
@@ -160,10 +159,6 @@ app.get('/', (req: Request, res: Response) => {
   res.json({ message: 'Welcome to Express with TypeScript!' });
 });
 
-app.use('/api/users', userRoutes);
-
-// Error handling middleware (should be last)
-app.use(errorHandler);
 
 // Start server
 app.listen(PORT, () => {
