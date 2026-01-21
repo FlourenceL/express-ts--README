@@ -146,7 +146,9 @@ Create `src/index.ts`:
 ```typescript
 import express from 'express';
 import type { Request, Response, Express } from 'express';
+import dotenv from 'dotenv'
 
+dotenv.config()
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
