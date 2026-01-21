@@ -39,6 +39,7 @@ Install Express and other required dependencies:
 ```bash
 # Production dependencies
 npm install express
+npm i dotenv
 
 # Development dependencies
 npm install -D typescript @types/node @types/express ts-node nodemon
